@@ -1,0 +1,19 @@
+{
+  "name": "restaurantpage",
+  "version": "1.0.0",
+  "description": "DOM manipulation by dynamically rendering a simple restaurant homepage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessicafarias/RestaurantPage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessicafarias/RestaurantPage/issues"
+  },
+  "homepage": "https://github.com/jessicafarias/RestaurantPage#readme"
+}
