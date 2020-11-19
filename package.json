@@ -15,9 +15,5 @@
   "bugs": {
     "url": "https://github.com/jessicafarias/RestaurantPage/issues"
   },
-  "homepage": "https://github.com/jessicafarias/RestaurantPage#readme",
-  "devDependencies": {
-    "webpack": "^5.6.0",
-    "webpack-cli": "^4.2.0"
-  }
+  "homepage": "https://github.com/jessicafarias/RestaurantPage#readme"
 }
