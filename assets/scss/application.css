@@ -60,3 +60,23 @@ header{
 .svg_img{
   width: 50px;
 }
+
+nav{
+  font-size: 20px;
+  font-family: 'Hammersmith One', sans-serif;
+  line-height: 1.4;
+  letter-spacing: 0.14em;
+  border-bottom: 5px solid rgba(255, 127, 80, 0.637);
+  padding: 0;
+}
+
+.selected{
+  padding: 15px;
+  background-color: rgba(255, 127, 80, 0.637);
+  border-bottom: none
+}
+
+.noselected{
+  padding: 15px;
+  cursor: pointer;
+}

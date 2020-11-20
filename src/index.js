@@ -14,6 +14,10 @@ function style(parentId, ...styles){
   const parent = document.getElementById(parentId);
   parent.classList.add(...styles);
 }
+function unstyle(parentId, ...styles){
+  const parent = document.getElementById(parentId);
+  parent.classList.remove(...styles);
+}
 
 function img(imgId, src, ...styles){
   const imagen =document.getElementById(imgId);;
@@ -27,13 +31,56 @@ function btn(btnId, onclick, ...styles ){
   btn.classList.add(...styles);
 }
 
-function header(){
+function header() {
   style('header', 'd-flex', 'justify-content-center', 'flex-column', 'align-items-center')
   element('header','h1', 'FRUTASTIC','', 'd-block');
   element('header','p', 'HEALTHY FOOD & FRUIT EXPLOTION','', 'subtitle');
+
 }
 
-function menulink(){
+function gotophotos() {
+  style('nav_photos', 'selected');
+  unstyle('nav_opinions', 'selected');
+  unstyle('nav_menu', 'selected');
+
+  style('menulink', 'd-none');
+  unstyle('products', 'd-none');
+  style('opinions', 'd-none');
+}
+
+function gotopinions() {
+    style('nav_opinions', 'selected');
+    unstyle('nav_photos', 'selected');
+    unstyle('nav_menu', 'selected');
+
+    style('menulink', 'd-none');
+    style('products', 'd-none');
+    unstyle('opinions', 'd-none');
+}
+
+function gotomenu() {
+    style('nav_menu', 'selected');
+    unstyle('nav_opinions', 'selected');
+    unstyle('nav_photos', 'selected');
+
+    unstyle('menulink', 'd-none');
+    style('products', 'd-none');
+    style('opinions', 'd-none')
+}
+
+function navbar( ){
+  style('navbar', 'd-flex', 'justify-content-around');
+  element('navbar', 'div', 'PHOTOS', 'nav_photos', 'noselected');
+  element('navbar', 'div', 'OPINIONS', 'nav_opinions', 'noselected');
+  element('navbar', 'div', 'MENU', 'nav_menu', 'noselected');
+  
+  document.getElementById('nav_menu').addEventListener("click", gotomenu);
+  document.getElementById('nav_photos').addEventListener("click", gotophotos);
+  document.getElementById('nav_opinions').addEventListener("click", gotopinions);
+
+}
+
+function menulink() {
   style('menulink','row', 'p-4')
   element('menulink','div','','div1', 'col-6', 'p-5');
   element('menulink','div','','div2', 'col-6' , 'm-auto');
@@ -51,9 +98,8 @@ function menulink(){
 
 }
 
-
 function products(){
-  style('products', 'p-5')
+  style('products', 'p-5');
   element('products','h2','GALERIA DE FOTOS','', 'w-100');
   element('products','p','Los mejores platillos deas la semana','', 'w-100');
   
@@ -109,8 +155,8 @@ function footer(){
   element('div_footer','h3','EMAIL: frutastic@gmail.com','', 'w-25');
   element('div_footer','h3','ADRESS: Pensiones, Mérida','', 'd-block');
 }
-
 header();
+navbar(); 
 menulink();
 products();
 opinions();
