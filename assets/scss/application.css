@@ -80,3 +80,7 @@ nav{
   padding: 15px;
   cursor: pointer;
 }
+
+.noselected:hover{
+  background-color: rgba(230, 80, 26, 0.192);;
+}
