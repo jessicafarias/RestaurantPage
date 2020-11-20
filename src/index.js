@@ -103,7 +103,7 @@ function footer(){
   element('footer','img','','img_footer', 'w-100');
   img('img_footer', "../assets/images/pink_smoothie.jpg", 'image');
   
-  element('footer', 'div', '','div_footer', 'justify-content-between', 'p-5', 'change-bg')
+  element('footer', 'div', '','div_footer', 'd-flex','justify-content-between', 'p-5', 'change-bg')
   element('div_footer','h2','CONTACT','', 'w-25');
   element('div_footer','h3','PHONE: 9993861435','', 'd-block');
   element('div_footer','h3','EMAIL: frutastic@gmail.com','', 'w-25');
