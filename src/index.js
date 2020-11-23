@@ -9,7 +9,7 @@ import pinksmoothie from '../assets/images/pink_smoothie.jpg';
 
 console.log('simple console log changes');
 
-function element(parentId, childType, content, childId, ...styles) {
+const element =(parentId, childType, content, childId, ...styles)=> {
   const child = document.createElement(childType);
   child.innerHTML = content;
   child.classList.add(...styles);
@@ -19,34 +19,35 @@ function element(parentId, childType, content, childId, ...styles) {
   }
 }
 
-function style(parentId, ...styles) {
+const style = (parentId, ...styles) => {
   const parent = document.getElementById(parentId);
   parent.classList.add(...styles);
 }
-function unstyle(parentId, ...styles) {
+
+const unstyle = (parentId, ...styles) => {
   const parent = document.getElementById(parentId);
   parent.classList.remove(...styles);
 }
 
-function img(imgId, src, ...styles) {
+const img = (imgId, src, ...styles) => {
   const imagen = document.getElementById(imgId);
   imagen.src = src;
   imagen.classList.add(...styles);
 }
 
-function btn(btnId, onclick, ...styles) {
+const btn = (btnId, onclick, ...styles) => {
   const btn = document.getElementById(btnId);
   btn.onclick = onclick;
   btn.classList.add(...styles);
 }
 
-function header() {
+const header = () => {
   style('header', 'd-flex', 'justify-content-center', 'flex-column', 'align-items-center');
   element('header', 'h1', 'FRUTASTIC', '', 'd-block');
   element('header', 'p', 'HEALTHY FOOD & FRUIT EXPLOTION', '', 'subtitle');
 }
 
-function gotophotos() {
+const gotophotos = () => {
   style('nav_photos', 'selected');
   unstyle('nav_opinions', 'selected');
   unstyle('nav_menu', 'selected');
@@ -56,7 +57,7 @@ function gotophotos() {
   style('opinions', 'd-none');
 }
 
-function gotopinions() {
+const gotopinions = () => {
   style('nav_opinions', 'selected');
   unstyle('nav_photos', 'selected');
   unstyle('nav_menu', 'selected');
@@ -66,7 +67,7 @@ function gotopinions() {
   unstyle('opinions', 'd-none');
 }
 
-function gotomenu() {
+const gotomenu = () => {
   style('nav_menu', 'selected');
   unstyle('nav_opinions', 'selected');
   unstyle('nav_photos', 'selected');
@@ -76,7 +77,7 @@ function gotomenu() {
   style('opinions', 'd-none');
 }
 
-function navbar() {
+const navbar = () => {
   style('navbar', 'd-flex', 'justify-content-around');
   element('navbar', 'div', 'PHOTOS', 'nav_photos', 'noselected');
   element('navbar', 'div', 'OPINIONS', 'nav_opinions', 'noselected');
@@ -87,7 +88,7 @@ function navbar() {
   document.getElementById('nav_opinions').addEventListener('click', gotopinions);
 }
 
-function menulink() {
+const menulink = () => {
   style('menulink', 'row', 'p-4');
   element('menulink', 'div', '', 'div1', 'col-6', 'p-5');
   element('menulink', 'div', '', 'div2', 'col-6', 'm-auto');
@@ -104,7 +105,7 @@ function menulink() {
   btn('btnMenu', '#', 'btn', 'btn-success');
 }
 
-function products() {
+const products = () => {
   style('products', 'p-5');
   element('products', 'h2', 'GALERIA DE FOTOS', '', 'w-100');
   element('products', 'p', 'Los mejores platillos deas la semana', '', 'w-100');
@@ -127,7 +128,7 @@ function products() {
   img('img_product3', fexplotion, 'image');
 }
 
-function opinions() {
+const opinions = () => {
   const text = 'A NEW EXPERIENCE IN TASTE AND SERVICE';
   style('opinions', 'change-bg', 'p-3');
   element('opinions', 'h2', text, '', 'row', 'p-4');
@@ -150,7 +151,7 @@ function opinions() {
   element('div_opinion3', 'p', opinion3, '', 'd-block');
 }
 
-function footer() {
+const footer = () => {
   element('footer', 'img', '', 'img_footer', 'w-100');
   img('img_footer', pinksmoothie, 'image');
 
