@@ -164,9 +164,11 @@ function footer(){
   element('div_footer','h3','EMAIL: frutastic@gmail.com','', 'w-25');
   element('div_footer','h3','ADRESS: Pensiones, Mérida','', 'd-block');
 }
+
 header();
 navbar(); 
 menulink();
 products();
 opinions();
+gotophotos();
 footer();
