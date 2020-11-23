@@ -1,0 +1,4 @@
+#ignore webpacke node_modules
+/node_modules
+
+#to sync them run npm install after clone project
