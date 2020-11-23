@@ -1,4 +1,13 @@
+import './style.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 console.log('simple console log changes');
+import jugoshealthy from '../assets/images/jugoshealthy.jpg';
+import black_smoothie from '../assets/images/black_smoothie.jpg';
+import exotic from '../assets/images/exotic.jpg';
+import f_explotion from '../assets/images/fruit_explotion.jpg';
+import pink_smoothie from '../assets/images/pink_smoothie.jpg'
 
 function element(parentId, childType, content, childId, ...styles){
   const child = document.createElement(childType);
@@ -87,7 +96,7 @@ function menulink() {
 
   //Div1
   element('div1','img','','menuimg', 'w-100');
-  img('menuimg', "../assets/images/jugoshealthy.jpg", 'rounded');
+  img('menuimg', jugoshealthy, 'rounded');
 
   //Div2
   element('div2','h2','FRUTASTIC MENU','', 'w-100');
@@ -110,15 +119,15 @@ function products(){
 
   element('div1_p','h3','JUGOS HEALTHY','', 'w-100');
   element('div1_p','img','','img_product1', 'w-100');
-  img('img_product1', "../assets/images/black_smoothie.jpg", 'image');
+  img('img_product1', black_smoothie, 'image');
 
   element('div2_p','h3','JUGOS HEALTHY','', 'w-100');
   element('div2_p','img','','img_product2', 'w-100');
-  img('img_product2', "../assets/images/exotic.jpg", 'image');
+  img('img_product2', exotic, 'image');
 
   element('div3_p','h3','JUGOS HEALTHY','', 'w-100');
   element('div3_p','img','','img_product3', 'w-100');
-  img('img_product3', "../assets/images/fruit_explotion.jpg", 'image');
+  img('img_product3', f_explotion, 'image');
 }
 
 function opinions(){
@@ -147,7 +156,7 @@ function opinions(){
 
 function footer(){
   element('footer','img','','img_footer', 'w-100');
-  img('img_footer', "../assets/images/pink_smoothie.jpg", 'image');
+  img('img_footer', pink_smoothie, 'image');
   
   element('footer', 'div', '','div_footer', 'd-flex','justify-content-between', 'p-5', 'change-bg')
   element('div_footer','h2','CONTACT','', 'w-25');
