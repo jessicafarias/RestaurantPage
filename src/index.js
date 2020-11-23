@@ -9,7 +9,7 @@ import pinksmoothie from '../assets/images/pink_smoothie.jpg';
 
 console.log('simple console log changes');
 
-const element =(parentId, childType, content, childId, ...styles)=> {
+const element = (parentId, childType, content, childId, ...styles) => {
   const child = document.createElement(childType);
   child.innerHTML = content;
   child.classList.add(...styles);
@@ -17,35 +17,35 @@ const element =(parentId, childType, content, childId, ...styles)=> {
   if (childId !== '') {
     child.id = childId;
   }
-}
+};
 
 const style = (parentId, ...styles) => {
   const parent = document.getElementById(parentId);
   parent.classList.add(...styles);
-}
+};
 
 const unstyle = (parentId, ...styles) => {
   const parent = document.getElementById(parentId);
   parent.classList.remove(...styles);
-}
+};
 
 const img = (imgId, src, ...styles) => {
   const imagen = document.getElementById(imgId);
   imagen.src = src;
   imagen.classList.add(...styles);
-}
+};
 
 const btn = (btnId, onclick, ...styles) => {
   const btn = document.getElementById(btnId);
   btn.onclick = onclick;
   btn.classList.add(...styles);
-}
+};
 
 const header = () => {
   style('header', 'd-flex', 'justify-content-center', 'flex-column', 'align-items-center');
   element('header', 'h1', 'FRUTASTIC', '', 'd-block');
   element('header', 'p', 'HEALTHY FOOD & FRUIT EXPLOTION', '', 'subtitle');
-}
+};
 
 const gotophotos = () => {
   style('nav_photos', 'selected');
@@ -55,7 +55,7 @@ const gotophotos = () => {
   style('menulink', 'd-none');
   unstyle('products', 'd-none');
   style('opinions', 'd-none');
-}
+};
 
 const gotopinions = () => {
   style('nav_opinions', 'selected');
@@ -65,7 +65,7 @@ const gotopinions = () => {
   style('menulink', 'd-none');
   style('products', 'd-none');
   unstyle('opinions', 'd-none');
-}
+};
 
 const gotomenu = () => {
   style('nav_menu', 'selected');
@@ -75,7 +75,7 @@ const gotomenu = () => {
   unstyle('menulink', 'd-none');
   style('products', 'd-none');
   style('opinions', 'd-none');
-}
+};
 
 const navbar = () => {
   style('navbar', 'd-flex', 'justify-content-around');
@@ -86,7 +86,7 @@ const navbar = () => {
   document.getElementById('nav_menu').addEventListener('click', gotomenu);
   document.getElementById('nav_photos').addEventListener('click', gotophotos);
   document.getElementById('nav_opinions').addEventListener('click', gotopinions);
-}
+};
 
 const menulink = () => {
   style('menulink', 'row', 'p-4');
@@ -103,7 +103,7 @@ const menulink = () => {
   element('div2', 'p', text, '', 'd-block');
   element('div2', 'button', 'MENU', 'btnMenu', 'd-block');
   btn('btnMenu', '#', 'btn', 'btn-success');
-}
+};
 
 const products = () => {
   style('products', 'p-5');
@@ -126,7 +126,7 @@ const products = () => {
   element('div3_p', 'h3', 'JUGOS HEALTHY', '', 'w-100');
   element('div3_p', 'img', '', 'img_product3', 'w-100');
   img('img_product3', fexplotion, 'image');
-}
+};
 
 const opinions = () => {
   const text = 'A NEW EXPERIENCE IN TASTE AND SERVICE';
@@ -149,7 +149,7 @@ const opinions = () => {
   element('div_opinion1', 'p', opinion1, '', 'd-block');
   element('div_opinion2', 'p', opinion2, '', 'd-block');
   element('div_opinion3', 'p', opinion3, '', 'd-block');
-}
+};
 
 const footer = () => {
   element('footer', 'img', '', 'img_footer', 'w-100');
@@ -160,7 +160,7 @@ const footer = () => {
   element('div_footer', 'h3', 'PHONE: 9993861435', '', 'd-block');
   element('div_footer', 'h3', 'EMAIL: frutastic@gmail.com', '', 'w-25');
   element('div_footer', 'h3', 'ADRESS: Pensiones, Mérida', '', 'd-block');
-}
+};
 
 header();
 navbar();

@@ -1,4 +1,5 @@
 
+
 {
   "env": {
     "browser": true,
@@ -15,10 +16,12 @@
     "no-shadow": "off",
     "no-param-reassign": "off",
     "eol-last": "off",
-    "arrow-parens": "off"
+    "arrow-parens": "off",
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
   },
   "ignorePatterns": [
     "dist/",
     "build/"
   ]
+  
 }

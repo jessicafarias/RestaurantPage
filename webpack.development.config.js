@@ -35,6 +35,6 @@ module.exports = {
       },
     ],
   },
-  
+
   watch: true,
 };
