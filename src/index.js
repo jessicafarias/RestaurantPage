@@ -74,7 +74,7 @@ function gotomenu() {
 
     unstyle('menulink', 'd-none');
     style('products', 'd-none');
-    style('opinions', 'd-none')
+    style('opinions', 'd-none');
 }
 
 function navbar( ){
