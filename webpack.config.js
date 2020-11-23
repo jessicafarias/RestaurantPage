@@ -4,14 +4,14 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
-  plugins:[
+  plugins: [
     new CleanWebpackPlugin(),
     new HTMLWebpackPlugin({
       filename: 'index.html',
-      template:'./src/template.html',
-      templateParameters:{
+      template: './src/template.html',
+      templateParameters: {
         title: 'Index with template',
-      }
+      },
     }),
   ],
   output: {
@@ -22,7 +22,7 @@ module.exports = {
     rules: [
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -34,5 +34,5 @@ module.exports = {
       },
     ],
   },
-  watch: true
+  watch: true,
 };
