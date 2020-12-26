@@ -153,14 +153,15 @@ const opinions = () => {
 };
 
 const footer = () => {
-  element('footer', 'img', '', 'img_footer', 'w-100');
+  style('footer', 'w-100', 'change-bg');
+  element('footer', 'img', '', 'img_footer');
   img('img_footer', pinksmoothie, 'image');
 
-  element('footer', 'div', '', 'div_footer', 'row', 'change-bg');
-  element('div_footer', 'h2', 'CONTACT', '', 'col-lg-3', 'col-sm-12','text-center');
-  element('div_footer', 'h3', 'PHONE: 9993861435', '', 'col-lg-3','col-sm-12', 'text-justify');
-  element('div_footer', 'h3', 'EMAIL: fru@gmail.com', '', 'col-lg-3', 'col-sm12', 'text-justify');
-  element('div_footer', 'h3', 'ADRESS: Pensiones, Mérida', '', 'col-lg-3', 'col-sm-12', 'text-justify');
+  element('footer', 'div', '', 'div_footer', 'row', 'w-100');
+  element('div_footer', 'h2', 'CONTACT: ', '', 'col-lg-3', 'col-sm-12','text-center', 'mt-3');
+  element('div_footer', 'h3', 'PHONE: 9993861435', '', 'col-lg-3','col-sm-12', 'text-center', 'mt-3');
+  element('div_footer', 'h3', 'EMAIL: fru@gmail.com', '', 'col-lg-3', 'col-sm12', 'text-center', 'mt-3');
+  element('div_footer', 'h3', 'ADRESS: Pensiones, Mérida', '', 'col-lg-3', 'col-sm-12', 'text-center'), 'mt-3';
 };
 
 header();

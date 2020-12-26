@@ -3,6 +3,7 @@
 body {
   max-width: 1200px;
   background-color: #cece12;
+  overflow-x: hidden;
 }
 
 h1 {
