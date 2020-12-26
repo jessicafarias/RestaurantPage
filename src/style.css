@@ -83,3 +83,7 @@ nav {
 .noselected:hover {
   background-color: rgba(230, 80, 26, 0.192);
 }
+
+.container{
+  max-width: 80vh;
+}

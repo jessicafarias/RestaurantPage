@@ -1,3 +1,4 @@
+import './reset.css';
 import './style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import jugoshealthy from '../assets/images/jugoshealthy.jpg';
@@ -43,8 +44,8 @@ const btn = (btnId, onclick, ...styles) => {
 
 const header = () => {
   style('header', 'd-flex', 'justify-content-center', 'flex-column', 'align-items-center');
-  element('header', 'h1', 'FRUTASTIC', '', 'd-block');
-  element('header', 'p', 'HEALTHY FOOD & FRUIT EXPLOTION', '', 'subtitle');
+  element('header', 'h1', 'FRUTASTIC', '', 'd-block', 'text-center');
+  element('header', 'p', 'HEALTHY FOOD & FRUIT EXPLOTION', '', 'subtitle', 'text-center');
 };
 
 const gotophotos = () => {
@@ -90,8 +91,8 @@ const navbar = () => {
 
 const menulink = () => {
   style('menulink', 'row', 'p-4');
-  element('menulink', 'div', '', 'div1', 'col-6', 'p-5');
-  element('menulink', 'div', '', 'div2', 'col-6', 'm-auto');
+  element('menulink', 'div', '', 'div1', 'col-lg-6', 'p-5','col-sm-12');
+  element('menulink', 'div', '', 'div2', 'col-lg-6', 'm-auto', 'col-sm-12');
 
   // Div1
   element('div1', 'img', '', 'menuimg', 'w-100');
@@ -106,24 +107,24 @@ const menulink = () => {
 };
 
 const products = () => {
-  style('products', 'p-5');
-  element('products', 'h2', 'GALERIA DE FOTOS', '', 'w-100');
+  style('products', 'p-1');
+  element('products', 'h2', 'GALERIA DE FOTOS', '', 'w-100', 'text-center');
   element('products', 'p', 'Los mejores platillos deas la semana', '', 'w-100');
 
-  element('products', 'div', '', 'div_product', 'row', 'p-4');
-  element('div_product', 'div', '', 'div1_p', 'col-4');
-  element('div_product', 'div', '', 'div2_p', 'col-4');
-  element('div_product', 'div', '', 'div3_p', 'col-4');
+  element('products', 'div', '', 'div_product', 'row');
+  element('div_product', 'div', '', 'div1_p', 'col-lg-4', 'col-sm-12', 'col-md-4');
+  element('div_product', 'div', '', 'div2_p', 'col-lg-4', 'col-sm-12', 'col-md-4');
+  element('div_product', 'div', '', 'div3_p', 'col-lg-4', 'col-sm-12', 'col-md-4');
 
-  element('div1_p', 'h3', 'JUGOS HEALTHY', '', 'w-100');
+  element('div1_p', 'h3', 'SMOOTHIES', '', 'w-100', 'text-center');
   element('div1_p', 'img', '', 'img_product1', 'w-100');
   img('img_product1', blacksmoothie, 'image');
 
-  element('div2_p', 'h3', 'JUGOS HEALTHY', '', 'w-100');
+  element('div2_p', 'h3', 'EXOTIC JUGOS', '', 'w-100', 'text-center');
   element('div2_p', 'img', '', 'img_product2', 'w-100');
   img('img_product2', exotic, 'image');
 
-  element('div3_p', 'h3', 'JUGOS HEALTHY', '', 'w-100');
+  element('div3_p', 'h3', 'JUGOS HEALTHY', '', 'w-100', 'text-center');
   element('div3_p', 'img', '', 'img_product3', 'w-100');
   img('img_product3', fexplotion, 'image');
 };
@@ -134,9 +135,9 @@ const opinions = () => {
   element('opinions', 'h2', text, '', 'row', 'p-4');
   element('opinions', 'div', '', 'div_opinions', 'row', 'p-4');
 
-  element('div_opinions', 'div', '', 'div_opinion1', 'col-4');
-  element('div_opinions', 'div', '', 'div_opinion2', 'col-4');
-  element('div_opinions', 'div', '', 'div_opinion3', 'col-4');
+  element('div_opinions', 'div', '', 'div_opinion1', 'col-sm-12', 'col-lg-4','mt-4');
+  element('div_opinions', 'div', '', 'div_opinion2', 'col-sm-12', 'col-lg-4','mt-4');
+  element('div_opinions', 'div', '', 'div_opinion3', 'col-sm-12', 'col-lg-4','mt-4');
 
   element('div_opinion1', 'h3', 'JESSICA FARIAS', '', 'd-block');
   element('div_opinion2', 'h3', 'MILDRED MARGARITA', '', 'd-block');
@@ -155,11 +156,11 @@ const footer = () => {
   element('footer', 'img', '', 'img_footer', 'w-100');
   img('img_footer', pinksmoothie, 'image');
 
-  element('footer', 'div', '', 'div_footer', 'd-flex', 'justify-content-between', 'p-5', 'change-bg');
-  element('div_footer', 'h2', 'CONTACT', '', 'w-25');
-  element('div_footer', 'h3', 'PHONE: 9993861435', '', 'd-block');
-  element('div_footer', 'h3', 'EMAIL: frutastic@gmail.com', '', 'w-25');
-  element('div_footer', 'h3', 'ADRESS: Pensiones, Mérida', '', 'd-block');
+  element('footer', 'div', '', 'div_footer', 'row', 'change-bg');
+  element('div_footer', 'h2', 'CONTACT', '', 'col-lg-3', 'col-sm-12','text-center');
+  element('div_footer', 'h3', 'PHONE: 9993861435', '', 'col-lg-3','col-sm-12', 'text-justify');
+  element('div_footer', 'h3', 'EMAIL: fru@gmail.com', '', 'col-lg-3', 'col-sm12', 'text-justify');
+  element('div_footer', 'h3', 'ADRESS: Pensiones, Mérida', '', 'col-lg-3', 'col-sm-12', 'text-justify');
 };
 
 header();
